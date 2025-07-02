@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-forecast.jpg";
 
 const HeroSection = () => {
@@ -48,12 +49,16 @@ const HeroSection = () => {
           
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="lg" className="text-lg px-8 py-3">
-              View Analysis
-            </Button>
-            <Button variant="data" size="lg" className="text-lg px-8 py-3">
-              Explore Model
-            </Button>
+            <Link to="/dashboard">
+              <Button variant="hero" size="lg" className="text-lg px-8 py-3">
+                View Analysis
+              </Button>
+            </Link>
+            <Link to="/dashboard">
+              <Button variant="data" size="lg" className="text-lg px-8 py-3">
+                Explore Model
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
